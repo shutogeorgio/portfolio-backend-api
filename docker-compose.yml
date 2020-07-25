@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  portfolio:
+    container_name: portfolio_backend
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
