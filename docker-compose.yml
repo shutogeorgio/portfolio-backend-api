@@ -1,11 +1,32 @@
 version: '3'
 
 services:
-  portfolio:
-    container_name: portfolio_backend
+  portfolio_db:
+    container_name: portfolio_db
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: password
+      - POSTGRES_DB=portfolio_backend
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
     ports:
       - 5432:5432
+    networks:
+      - app-net
+
+  portfolio_api:
+    container_name: portfolio_api
+    image: portfolio:0.0.1-SNAPSHOT
+    restart: always
+    environment:
+      - DATABASE_HOST=portfolio_db
+    ports:
+      - 443:8080
+    depends_on:
+      - portfolio_db
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge
