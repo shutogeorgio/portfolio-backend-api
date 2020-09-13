@@ -8,34 +8,33 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "posts")
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 public class Portfolio {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
 
-    @NotNull
-    @Column(name="title")
-    private String title;
+	@NotNull
+	@Column(name = "title")
+	private String title;
 
-    @NotNull
-    @Column(name="description")
-    private String description;
+	@NotNull
+	@Column(name = "description")
+	private String description;
 
-    @NotNull
-    @Column(name="url")
-    private String url;
+	@NotNull
+	@Column(name = "url")
+	private String url;
 
-    @Column(name="meta_info")
-    private String metaInfo;
+	@Column(name = "meta_info")
+	private String metaInfo;
 
-    @Column(name="created_at")
-    private LocalDateTime createdAt;
+	@Column(name = "created_at")
+	private LocalDateTime createdAt;
 
-    @Column(name="updated_at")
-    private LocalDateTime updatedAt;
+	@Column(name = "updated_at")
+	private LocalDateTime updatedAt;
+
 }
