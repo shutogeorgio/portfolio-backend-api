@@ -1,4 +1,4 @@
-package portfolio.api;
+package portfolio.api.mode;
 
 import com.sun.istack.NotNull;
 import lombok.*;

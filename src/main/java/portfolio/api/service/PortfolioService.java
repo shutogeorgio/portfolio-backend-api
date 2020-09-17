@@ -1,16 +1,17 @@
-package portfolio.api;
+package portfolio.api.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import portfolio.api.mode.Portfolio;
+import portfolio.api.repository.PortfolioRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PortfolioService {
 
-	private PortfolioRepository portfolioRepository;
+	private final PortfolioRepository portfolioRepository;
 
 	@Autowired
 	public PortfolioService(PortfolioRepository portfolioRepository) {

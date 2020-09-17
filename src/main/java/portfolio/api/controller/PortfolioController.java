@@ -1,12 +1,13 @@
-package portfolio.api;
+package portfolio.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import portfolio.api.service.PortfolioService;
+import portfolio.api.mode.Portfolio;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.springframework.http.ResponseEntity.ok;
 
