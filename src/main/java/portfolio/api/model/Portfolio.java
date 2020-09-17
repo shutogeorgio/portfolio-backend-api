@@ -1,4 +1,4 @@
-package portfolio.api.mode;
+package portfolio.api.model;
 
 import com.sun.istack.NotNull;
 import lombok.*;
@@ -9,11 +9,12 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "posts")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Portfolio {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
 	private int id;
 
 	@NotNull
