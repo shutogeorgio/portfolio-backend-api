@@ -1,0 +1,70 @@
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:sectnums:
+:sectanchors:
+:linkattrs:
+
+= Post  API
+
+This is an example output for a service running at http://localhost:8080/api/v1/post:
+
+== Overview
+
+=== Get List Of Post
+
+.request
+include::{snippets}/get-all/http-request.adoc[]
+
+.response
+include::{snippets}/get-all/http-response.adoc[]
+
+=== Get One Post
+include::{snippets}/get-one/path-parameters.adoc[]
+
+include::{snippets}/get-one/curl-request.adoc[]
+
+.request
+include::{snippets}/get-one/http-request.adoc[]
+
+.response
+include::{snippets}/get-one/http-response.adoc[]
+
+
+=== Create Post
+include::{snippets}/create-one/curl-request.adoc[]
+
+.request
+include::{snippets}/create-one/http-request.adoc[]
+
+.response
+include::{snippets}/create-one/http-response.adoc[]
+
+=== Delete Post
+include::{snippets}/delete-one/path-parameters.adoc[]
+
+include::{snippets}/delete-one/curl-request.adoc[]
+
+.request
+include::{snippets}/delete-one/http-request.adoc[]
+
+.response
+include::{snippets}/delete-one/http-response.adoc[]
+
+=== Update Post
+include::{snippets}/update-one/path-parameters.adoc[]
+
+include::{snippets}/update-one/curl-request.adoc[]
+
+.request
+include::{snippets}/update-one/http-request.adoc[]
+
+.response
+include::{snippets}/update-one/http-response.adoc[]
+
+
+
+
+
+As you can see the format is very simple, and in fact you always get the same message.
