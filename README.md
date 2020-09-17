@@ -13,10 +13,3 @@ $ ./build-image.sh
 ```bash
 $ docker-compose up -d
 ```
-
-#### RESTDocs
-API Endpoint 
-see
-```shell
-<project>/src/main/resources/restdocs/RestDocs.html
-```
