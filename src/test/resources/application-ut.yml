@@ -1,0 +1,24 @@
+#############################
+# SPRING SETTINGS
+#############################
+spring:
+  security:
+    basic:
+      enable: false
+  properties:
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: create-drop
+  datasource:
+    initialization-mode: always
+    data: db/data.sql
+  #############################
+  # FLYWAY SETTINGS
+  #############################
+  flyway:
+    enabled: false
+
+management:
+  security:
+    enabled: false

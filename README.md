@@ -1,14 +1,22 @@
-# portfolio-backend-api
+## portfolio-backend-api
 🍩 The API For Portfolio
 
-### Setup Enviroment
+### Setup Environment
 Java JDK 11
 
-### Database Setting
-bash
+#### Build Application Image
+```bash
+$ ./build-image.sh
 ```
+
+#### Run Application With Container
+```bash
 $ docker-compose up -d
-$ docker exec -it <container id> bash;
-psql -U postgres
-CREATE DATABASE portfolio_backend;
+```
+
+#### RESTDocs
+API Endpoint 
+see
+```shell
+<project>/src/main/resources/restdocs/RestDocs.html
 ```
