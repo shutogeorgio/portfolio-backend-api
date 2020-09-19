@@ -19,7 +19,7 @@ services:
     image: portfolio:0.0.1-SNAPSHOT
     restart: always
     environment:
-      - DATABASE_HOST=portfolio_db
+      - DATABASE_URL_SPRINGBOOT=jdbc:postgresql://portfolio_db:5432/portfolio_backend
     ports:
       - 80:8080
     depends_on:

@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.springframework.http.ResponseEntity.ok;
 
-@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/v1/")
 public class PortfolioController {
