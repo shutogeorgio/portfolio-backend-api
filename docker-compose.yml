@@ -11,22 +11,22 @@ services:
       - POSTGRES_PASSWORD=password
     ports:
       - 5432:5432
-#    networks:
-#      - app-net
-#
-#  portfolio_api:
-#    container_name: portfolio_api
-#    image: portfolio:0.0.1-SNAPSHOT
-#    restart: always
-#    environment:
-#      - DATABASE_URL_SPRINGBOOT=jdbc:postgresql://portfolio_db:5432/portfolio_backend
-#    ports:
-#      - 80:8080
-#    depends_on:
-#      - portfolio_db
-#    networks:
-#      - app-net
-#
-#networks:
-#  app-net:
-#    driver: bridge
+    networks:
+      - app-net
+
+  portfolio_api:
+    container_name: portfolio_api
+    image: portfolio:0.0.1-SNAPSHOT
+    restart: always
+    environment:
+      - DATABASE_URL_SPRINGBOOT=jdbc:postgresql://portfolio_db:5432/portfolio_backend
+    ports:
+      - 80:8080
+    depends_on:
+      - portfolio_db
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge
