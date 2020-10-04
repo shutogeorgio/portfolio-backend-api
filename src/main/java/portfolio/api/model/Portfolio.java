@@ -29,9 +29,6 @@ public class Portfolio {
 	@Column(name = "url")
 	private String url;
 
-	@Column(name = "meta_info")
-	private String metaInfo;
-
 	@Column(name = "created_at")
 	private LocalDateTime createdAt;
 

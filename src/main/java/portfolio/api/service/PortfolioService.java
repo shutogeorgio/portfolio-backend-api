@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import portfolio.api.model.Portfolio;
 import portfolio.api.repository.PortfolioRepository;
+import portfolio.api.repository.StackRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -13,9 +14,13 @@ public class PortfolioService {
 
 	private final PortfolioRepository portfolioRepository;
 
+	private final StackRepository stackRepository;
+
 	@Autowired
-	public PortfolioService(PortfolioRepository portfolioRepository) {
+	public PortfolioService(PortfolioRepository portfolioRepository,
+			StackRepository stackRepository) {
 		this.portfolioRepository = portfolioRepository;
+		this.stackRepository = stackRepository;
 	}
 
 	public List<Portfolio> getAll() {
@@ -30,7 +35,6 @@ public class PortfolioService {
 		Portfolio newPortfolio = new Portfolio();
 		newPortfolio.setTitle(req.getTitle());
 		newPortfolio.setDescription(req.getDescription());
-		newPortfolio.setMetaInfo(req.getMetaInfo());
 		newPortfolio.setUrl(req.getUrl());
 		newPortfolio.setCreatedAt(LocalDateTime.now());
 		newPortfolio.setUpdatedAt(LocalDateTime.now());
@@ -44,7 +48,6 @@ public class PortfolioService {
 		}
 		previousOne.setTitle(req.getTitle());
 		previousOne.setDescription(req.getDescription());
-		previousOne.setMetaInfo(req.getMetaInfo());
 		previousOne.setUrl(req.getUrl());
 		previousOne.setUpdatedAt(LocalDateTime.now());
 		return portfolioRepository.saveAndFlush(previousOne);
@@ -56,6 +59,7 @@ public class PortfolioService {
 			return "Not found";
 		}
 		portfolioRepository.deleteById(id);
+		stackRepository.deleteAllByPortfolioId(id);
 		return "Deleted";
 	}
 

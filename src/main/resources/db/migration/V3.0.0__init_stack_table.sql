@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS stacks(
+    id SERIAL PRIMARY KEY,
+    portfolio_id INTEGER NOT NULL,
+    platform INTEGER NOT NULL,
+    name VARCHAR(100) NOT NULL
+);

@@ -1,2 +1,5 @@
-INSERT INTO posts(title, description, url, meta_info, created_at, updated_at) VALUES('Job Interview Pro', 'a job interview platform for everybody', 'https://job-interview-pro.herokuapp.com/', 'Ruby, Rails', NOW(), NOW());
-INSERT INTO posts(title, description, url, meta_info, created_at, updated_at) VALUES('Imagine Debater', 'a debate game makes us more productive and creative', 'https://imagine-debater.netlify.app/', 'Next.js, JSX', NOW(), NOW());
+INSERT INTO posts(title, description, url, created_at, updated_at) VALUES('Job Interview Pro', 'a job interview platform for everybody', 'https://job-interview-pro.herokuapp.com/', NOW(), NOW());
+INSERT INTO posts(title, description, url, created_at, updated_at) VALUES('Imagine Debater', 'a debate game makes us more productive and creative', 'https://imagine-debater.netlify.app/', NOW(), NOW());
+INSERT INTO posts(title, description, url, created_at, updated_at) VALUES('Custome WordPress Theme', 'Optimized all css, js and html for maximizing webpage test scores', 'https://blog.onejapanesedev.com/', NOW(), NOW());
+INSERT INTO posts(title, description, url, created_at, updated_at) VALUES('Slack Auto Notification', 'Automation of notifying SEO Score via Google Search Console API', 'https://blog.onejapanesedev.com/slack-automation/', NOW(), NOW());
+INSERT INTO posts(title, description, url, created_at, updated_at) VALUES('OAuth and OpenID', 'The presentation about OAuth2, OpenID Connect with spring security', 'https://www.slideshare.net/ShutoUwai/oauth2-openid-connect-with-spring-security', NOW(), NOW());
