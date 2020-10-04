@@ -39,6 +39,7 @@ public class PortfolioController {
 			resEle.setId(portfolio.getId());
 			resEle.setTitle(portfolio.getTitle());
 			resEle.setDescription(portfolio.getDescription());
+			resEle.setUrl(portfolio.getUrl());
 			List<Stack> stackList = this.stackService.getAll(portfolio.getId());
 			resEle.setStackList(stackList);
 			portfolioResponseList.add(resEle);
